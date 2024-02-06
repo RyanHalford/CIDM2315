@@ -1,41 +1,26 @@
-﻿namespace HW3_Part2;
+﻿namespace HW3_Part1;
 
 class Program
 {
-   
-   static void PrintTriangle(int N, string shape)
-    {
-        Console.WriteLine($"N = {N} Shape = {shape}");
-        if (shape == "left")
-        {
-            for (int i = 1; i <= N; i++)
-            {
-                Console.WriteLine(new String('*', i));
-            }
-        }
-        else if (shape == "right")
-        {
-            for (int i = 1; i <= N; i++)
-            {
-                Console.WriteLine(new String(' ', N - i) + new String('*', i));
-            }
-        }
-        else
-        {
-            Console.WriteLine("Invalid shape! Please enter 'left' or 'right'.");
-        }
-    }
-
-   
-   
     static void Main(string[] args)
     {
-    Console.Write("Enter an integer number: ");
-        int N = Convert.ToInt32(Console.ReadLine());
-        
-        Console.Write("Enter shape (left or right): ");
-        string shape = Console.ReadLine();
+         Console.WriteLine("Enter the first number: ");
+            int n1 = Convert.ToInt32(Console.ReadLine());
 
-        PrintTriangle(N, shape);
+            Console.WriteLine("Enter the second number: ");
+            int n2 = Convert.ToInt32(Console.ReadLine());
+
+             if (n1 > n2)
+            {
+                Console.WriteLine("The Largest num: " + n1);
+            }
+            else if (n2 > n1)
+            {
+                Console.WriteLine("The Largest num: " + n2);
+            }
+            else
+            {
+                Console.WriteLine("Both numbers are equal.");
+            }
+        }
     }
-}
